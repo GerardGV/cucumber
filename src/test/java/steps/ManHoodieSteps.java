@@ -15,8 +15,8 @@ public class ManHoodieSteps {
 
     @Given("the user is in the index page")
     public void userInIndexPage(){
-        System.setProperty("webdriver.gecko.driver", "Drivers/geckodriver.exe");
-        driver = new FirefoxDriver();
+        System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver");
+        driver = new ChromeDriver();
         driver.navigate().to("https://es.y8.com");
     }
 
