@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta charset='utf-8'>
+<title>TestNG Report</title>
+<style type="text/css">
+table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}
+td,th {border:1px solid #009;padding:.25em .5em}
+.result th {vertical-align:bottom}
+.param th {padding-left:1em;padding-right:1em}
+.param td {padding-left:.5em;padding-right:2em}
+.stripe td,.stripe th {background-color: #E6EBF9}
+.numi,.numi_attn {text-align:right}
+.total td {font-weight:bold}
+.passedodd td {background-color: #0A0}
+.passedeven td {background-color: #3F3}
+.skippedodd td {background-color: #CCC}
+.skippedodd td {background-color: #DDD}
+.failedodd td,.numi_attn {background-color: #F33}
+.failedeven td,.stripe .numi_attn {background-color: #D00}
+.stacktrace {white-space:pre;font-family:monospace}
+.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}
+</style>
+</head>
+<body>
+<table cellspacing="0" cellpadding="0" class="testOverview">
+<tr><th>Test</th><th>Methods<br/>Passed</th><th>Scenarios<br/>Passed</th><th># skipped</th><th># failed</th><th>Total<br/>Time</th><th>Included<br/>Groups</th><th>Excluded<br/>Groups</th></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t1">cucumber</a></td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">1,8 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+</table>
+<table cellspacing="0" cellpadding="0" class="methodOverview" id="summary">
+<tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
+<tr id="t1"><th colspan="5">cucumber &#8212; failed</th></tr>
+<tr class="failedodd"><td>RunManHoodieTest</td><td><a href="#m1"><b>runScenario</b> (cucumber) ("Runs Cucumber Scenarios")</a></td><td class="numi">1</td><td>1703593874127</td><td class="numi">1587</td></tr>
+</table>
+<h1>cucumber</h1>
+<h2 id="m1">RunManHoodieTest:runScenario</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>&quot;Show Man Hoodie&quot;</td>
+<td>&quot;ManHoodie&quot;</td>
+</tr>
+<tr><td colspan="2">
+<div class="stacktrace">org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 114
+Current browser version is 120.0.6099.129 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Build info: version: &apos;3.8.1&apos;, revision: &apos;6e95a6684b&apos;, time: &apos;2017-12-01T18:33:54.468Z&apos;
+System info: host: &apos;ROS&apos;, ip: &apos;192.168.1.50&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_402&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	GetHandleVerifier [0x00B4A813+48355]
+	(No symbol) [0x00ADC4B1]
+	(No symbol) [0x009E5358]
+	(No symbol) [0x00A061AC]
+	(No symbol) [0x00A01EF3]
+	(No symbol) [0x00A00579]
+	(No symbol) [0x00A30C55]
+	(No symbol) [0x00A3093C]
+	(No symbol) [0x00A2A536]
+	(No symbol) [0x00A082DC]
+	(No symbol) [0x00A093DD]
+	GetHandleVerifier [0x00DAAABD+2539405]
+	GetHandleVerifier [0x00DEA78F+2800735]
+	GetHandleVerifier [0x00DE456C+2775612]
+	GetHandleVerifier [0x00BD51E0+616112]
+	(No symbol) [0x00AE5F8C]
+	(No symbol) [0x00AE2328]
+	(No symbol) [0x00AE240B]
+	(No symbol) [0x00AD4FF7]
+	BaseThreadInitThunk [0x75CF7BA9+25]
+	RtlInitializeExceptionChain [0x7795BD2B+107]
+	RtlClearBits [0x7795BCAF+191]
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:514)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:501)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:487)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:241)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:531)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:219)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:142)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at steps.ManHoodieSteps.userInIndexPage(ManHoodieSteps.java:18)
+	at ✽.the user is in the index page(file:///C:/Users/janru/00-UNI/01-%20TQS/cucumber/src/test/java/features/manHoodie.feature:4)
+... Removed 4 stack frames</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+</body></html>
