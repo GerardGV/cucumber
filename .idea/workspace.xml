@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f0ef0212-93f6-4d74-a68d-40468a0c81f3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/features/RussianCarDriver.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reports/emailable-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/emailable-report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/RunManHoodieTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RussianCarDriverTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/features/manHoodie.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/ManHoodieSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/RussianCarDriverSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/RussianCarDriver.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/RussianCarDriver.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/RussianCarDriverSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/RussianCarDriverSteps.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +44,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "TestNG.RegisterTest.executor": "Run",
     "TestNG.RunManHoodieTest.executor": "Run",
     "TestNG.RussianCarDriverTest.executor": "Run",
     "WebServerToolWindowFactoryState": "false",
@@ -64,7 +63,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.RussianCarDriverTest">
+  <component name="RunManager" selected="TestNG.RegisterTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="cucumber" />
@@ -80,6 +79,17 @@
     </configuration>
     <configuration name="emailable-report.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/cucumber/reports/emailable-report.html" useBuiltInWebServerPort="true">
       <method v="2" />
+    </configuration>
+    <configuration name="RegisterTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="cucumber" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RegisterTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="RussianCarDriverTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="cucumber" />
@@ -113,10 +123,12 @@
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="JavaScript Debug.emailable-report.html" />
+      <item itemvalue="TestNG.RegisterTest" />
       <item itemvalue="TestNG.RussianCarDriverTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.RegisterTest" />
         <item itemvalue="TestNG.RussianCarDriverTest" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JavaScript Debug.emailable-report.html" />
@@ -143,7 +155,8 @@
       <workItem from="1703590679934" duration="129000" />
       <workItem from="1703590862493" duration="137000" />
       <workItem from="1703591008947" duration="3584000" />
-      <workItem from="1703689357666" duration="2184000" />
+      <workItem from="1703689357666" duration="4043000" />
+      <workItem from="1703704793337" duration="7186000" />
     </task>
     <servers />
   </component>

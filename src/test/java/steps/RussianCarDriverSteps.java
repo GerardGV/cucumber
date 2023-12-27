@@ -8,14 +8,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 
-import java.io.IOException;
-import java.io.PrintWriter;
 
 public class RussianCarDriverSteps {
 
     WebDriver driver;
 
-    @Given("the user is in the index page")
+    @Given("the user is in the index page to search a game")
     public void userInIndexPage(){
         // CHROME
         //System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver");
@@ -47,14 +45,7 @@ public class RussianCarDriverSteps {
     public void hoodieListAppears(String article){
         // El título es el que toca
         String title = driver.getTitle();
-        try {
-            PrintWriter writer = new PrintWriter("log.txt", "UTF-8");
-            writer.println(title);
-            writer.close();
-        } catch (IOException e) {
-            System.out.println("An error occurred.");
-            e.printStackTrace();
-        }
+
         Assert.assertTrue(title.contains("buscar juegos"));
     }
 }
