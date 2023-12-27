@@ -25,33 +25,28 @@ td,th {border:1px solid #009;padding:.25em .5em}
 <body>
 <table cellspacing="0" cellpadding="0" class="testOverview">
 <tr><th>Test</th><th>Methods<br/>Passed</th><th>Scenarios<br/>Passed</th><th># skipped</th><th># failed</th><th>Total<br/>Time</th><th>Included<br/>Groups</th><th>Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em"><a href="#t1">cucumber</a></td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">0,9 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t1">cucumber</a></td><td class="numi">2</td><td class="numi">2</td><td class="numi">0</td><td class="numi">0</td><td class="numi">7,7 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="methodOverview" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr id="t1"><th colspan="5">cucumber &#8212; failed</th></tr>
-<tr class="failedodd"><td>RunManHoodieTest</td><td><a href="#m1"><b>runScenario</b> (cucumber) ("Runs Cucumber Scenarios")</a></td><td class="numi">1</td><td>1703603649398</td><td class="numi">213</td></tr>
+<tr id="t1"><th colspan="5">cucumber &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="2">RussianCarDriverTest</td><td><a href="#m1"><b>runScenario</b> (cucumber) ("Runs Cucumber Scenarios")</a></td><td class="numi">2</td><td>1703691440166</td><td class="numi">7571</td></tr><tr class="passedodd"><td><a href="#m2"><b>runScenario</b> (cucumber) ("Runs Cucumber Scenarios")</a></td><td class="numi">2</td><td>1703691440166</td><td class="numi">7571</td></tr>
 </table>
 <h1>cucumber</h1>
-<h2 id="m1">RunManHoodieTest:runScenario</h2>
+<h2 id="m1">RussianCarDriverTest:runScenario</h2>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
-<tr class="param stripe"><td>&quot;Show Man Hoodie&quot;</td>
-<td>&quot;ManHoodie&quot;</td>
+<tr class="param stripe"><td>&quot;Show Russian Car Driver&quot;</td>
+<td>&quot;Russian Car Driver&quot;</td>
 </tr>
-<tr><td colspan="2">
-<div class="stacktrace">java.lang.IllegalStateException: The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information, see https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver. The latest version can be downloaded from http://chromedriver.storage.googleapis.com/index.html
-	at com.google.common.base.Preconditions.checkState(Preconditions.java:754)
-	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:124)
-	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
-	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
-	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:339)
-	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
-	at steps.ManHoodieSteps.userInIndexPage(ManHoodieSteps.java:19)
-	at ✽.the user is in the index page(file:///Users/gerard/Desktop/4.1/TQS/cucumber/src/test/java/features/manHoodie.feature:4)
-</div>
-</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m2">RussianCarDriverTest:runScenario</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>&quot;Show Russian Car Driver&quot;</td>
+<td>&quot;Russian Car Driver&quot;</td>
+</tr>
 </table>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>
