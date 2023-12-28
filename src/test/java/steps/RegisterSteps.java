@@ -73,13 +73,9 @@ public class RegisterSteps {
 
         driver.switchTo().frame(driver.findElement(By.id(iframeName)));
 
-
-
         wait = new WebDriverWait(driver, 3);
         wait.until(ExpectedConditions.presenceOfElementLocated(By.id("identity_nickname")));
         driver.findElement(By.id("identity_nickname")).sendKeys(username);
-
-
     }
     @When("^the user enters (.*) in the name button")
     public void userEntersName(String name){
@@ -88,14 +84,16 @@ public class RegisterSteps {
 
     @When("the user clicks next 1")
     public void userClickNext(){
-        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+        WebDriverWait wait = new WebDriverWait(driver, 2);
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.className("next")).findElement(By.className("norm"))));
         driver.findElement(By.className("next")).click();
 
     }
 
-    @When("^the user enters temporal (.*) in the email bar")
+    @When("^the user enters in the email bar his (.*)")
     public void userEntersTemporalEmail(String emailRegister){
-        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+        WebDriverWait wait = new WebDriverWait(driver, 2);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("meta_email")));
         driver.findElement(By.id("meta_email")).sendKeys(emailRegister);
     }
 
@@ -106,25 +104,29 @@ public class RegisterSteps {
 
     @When("the user clicks next 2")
     public void userClickNext2(){
-        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+        WebDriverWait wait = new WebDriverWait(driver, 2);
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.className("next")).findElement(By.className("norm"))));
         driver.findElement(By.className("next")).click();
     }
 
     @When("the user chooses boy or girl")
     public void userClickBoyOrGirl(){
-        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+        WebDriverWait wait = new WebDriverWait(driver, 2);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("male-icon")));
         driver.findElement(By.className("male-icon")).click();
     }
 
     @When("the user clicks next 3")
     public void userClickNext3(){
-        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+        WebDriverWait wait = new WebDriverWait(driver, 2);
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.className("next")).findElement(By.className("norm"))));
         driver.findElement(By.className("next")).click();
     }
 
     @When("the user chooses year")
     public void userSelectsYear(){
-        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("meta_date_of_birth_1i")));
         WebElement dropdownElement = driver.findElement(By.id("meta_date_of_birth_1i"));
         Select dropdown = new Select(dropdownElement);
 
@@ -143,7 +145,8 @@ public class RegisterSteps {
 
     @When("the user clicks finish")
     public void userClickFinish(){
-        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+        WebDriverWait wait = new WebDriverWait(driver, 2);
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.className("next")).findElement(By.className("finish"))));
         driver.findElement(By.className("finish")).click();
         driver.switchTo().parentFrame();
     }
@@ -151,9 +154,10 @@ public class RegisterSteps {
     @Then("the user is registered")
     public void userRegistered(){
         // El título es el que toca
-        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         try {
-            Assert.assertNotNull(driver.findElement(By.id("avatar"))); // Esto lanzará una excepción si el elemento no se encuentra
+            WebDriverWait wait = new WebDriverWait(driver, 3);
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("avatar")));
+            Assert.assertNotNull(driver.findElement(By.className("avatar"))); // Esto lanzará una excepción si el elemento no se encuentra
         } catch (NoSuchElementException e) {
             System.out.println("El elemento no se encontró.");
         }

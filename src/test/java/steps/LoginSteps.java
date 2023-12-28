@@ -76,7 +76,6 @@ public class LoginSteps {
         wait.until(ExpectedConditions.presenceOfElementLocated(By.id("account_email")));
 
         driver.findElement(By.id("account_email")).sendKeys(emailLogin); // enter email
-
     }
 
     @When("^the user enters in the password bar to log in the (.*)")
@@ -86,7 +85,8 @@ public class LoginSteps {
 
     @When("the user clicks connect")
     public void userClickConnect(){
-        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+        WebDriverWait wait = new WebDriverWait(driver, 2);
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.className("login"))));
         driver.findElement(By.className("login")).click();
         driver.switchTo().parentFrame();
     }
@@ -96,7 +96,9 @@ public class LoginSteps {
         // El título es el que toca
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         try {
-            Assert.assertNotNull(driver.findElement(By.id("avatar"))); // Esto lanzará una excepción si el elemento no se encuentra
+            WebDriverWait wait = new WebDriverWait(driver, 3);
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("avatar")));
+            Assert.assertNotNull(driver.findElement(By.className("avatar"))); // Esto lanzará una excepción si el elemento no se encuentra
         } catch (NoSuchElementException e) {
             System.out.println("El elemento no se encontró.");
         }

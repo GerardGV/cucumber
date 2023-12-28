@@ -10,4 +10,4 @@ Feature: Login
 
     Examples:
       |emailLogin|passwordLogin|
-      |cucumbertest@test.com|test1234|
+      |b7bede658dcca4@crankymonkey.info|idafsghbg12345|
