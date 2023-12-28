@@ -35,6 +35,12 @@ public class RegisterSteps {
 
         driver.navigate().to("https://es.y8.com");
         driver.manage().deleteAllCookies();
+
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.className("css-ik5ir8")));
+        if (driver.findElement(By.className("css-ik5ir8")).isDisplayed()){ // Cookies popup displayed
+            driver.findElement(By.className("css-ik5ir8")).click();
+        }
     }
 
     @When("the user clicks Register")
@@ -75,50 +81,50 @@ public class RegisterSteps {
 
 
     }
-    @When("^the user enters (.*) the name button")
+    @When("^the user enters (.*) in the name button")
     public void userEntersName(String name){
         driver.findElement(By.id("meta_first_name")).sendKeys(name);
     }
 
     @When("the user clicks next 1")
     public void userClickNext(){
-        driver.manage().timeouts().implicitlyWait(500, TimeUnit.MILLISECONDS);
+        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
         driver.findElement(By.className("next")).click();
 
     }
 
     @When("^the user enters temporal (.*) in the email bar")
-    public void userEntersEmail(String email){
-        driver.manage().timeouts().implicitlyWait(500, TimeUnit.MILLISECONDS);
-        driver.findElement(By.id("meta_email")).sendKeys(email);
+    public void userEntersTemporalEmail(String emailRegister){
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+        driver.findElement(By.id("meta_email")).sendKeys(emailRegister);
     }
 
     @When("^the user enters the (.*)")
-    public void userEntersPassword(String password){
-        driver.findElement(By.id("meta_password")).sendKeys(password);
+    public void userEntersPassword(String passwordRegister){
+        driver.findElement(By.id("meta_password")).sendKeys(passwordRegister);
     }
 
     @When("the user clicks next 2")
     public void userClickNext2(){
-        driver.manage().timeouts().implicitlyWait(500, TimeUnit.MILLISECONDS);
+        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
         driver.findElement(By.className("next")).click();
     }
 
     @When("the user chooses boy or girl")
     public void userClickBoyOrGirl(){
-        driver.manage().timeouts().implicitlyWait(500, TimeUnit.MILLISECONDS);
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         driver.findElement(By.className("male-icon")).click();
     }
 
     @When("the user clicks next 3")
     public void userClickNext3(){
-        driver.manage().timeouts().implicitlyWait(500, TimeUnit.MILLISECONDS);
+        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
         driver.findElement(By.className("next")).click();
     }
 
     @When("the user chooses year")
     public void userSelectsYear(){
-        driver.manage().timeouts().implicitlyWait(500, TimeUnit.MILLISECONDS);
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         WebElement dropdownElement = driver.findElement(By.id("meta_date_of_birth_1i"));
         Select dropdown = new Select(dropdownElement);
 
@@ -137,7 +143,7 @@ public class RegisterSteps {
 
     @When("the user clicks finish")
     public void userClickFinish(){
-        driver.manage().timeouts().implicitlyWait(500, TimeUnit.MILLISECONDS);
+        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
         driver.findElement(By.className("finish")).click();
         driver.switchTo().parentFrame();
     }
@@ -145,9 +151,9 @@ public class RegisterSteps {
     @Then("the user is registered")
     public void userRegistered(){
         // El título es el que toca
-        driver.manage().timeouts().implicitlyWait(500, TimeUnit.MILLISECONDS);
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         try {
-            Assert.assertNotNull(driver.findElement(By.id("user_logged_in"))); // Esto lanzará una excepción si el elemento no se encuentra
+            Assert.assertNotNull(driver.findElement(By.id("avatar"))); // Esto lanzará una excepción si el elemento no se encuentra
         } catch (NoSuchElementException e) {
             System.out.println("El elemento no se encontró.");
         }

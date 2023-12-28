@@ -8,6 +8,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 
+import java.util.concurrent.TimeUnit;
+
 
 public class RussianCarDriverSteps {
 
@@ -24,6 +26,12 @@ public class RussianCarDriverSteps {
         driver = new FirefoxDriver();
 
         driver.navigate().to("https://es.y8.com");
+        driver.manage().deleteAllCookies();
+
+        driver.manage().timeouts().implicitlyWait(500, TimeUnit.MILLISECONDS);
+        if (driver.findElement(By.className("css-ik5ir8")).isDisplayed()){ // Cookies popup displayed
+            driver.findElement(By.className("css-ik5ir8")).click();
+        }
     }
 
     @When("the user clicks conducir options")

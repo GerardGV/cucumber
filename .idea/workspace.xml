@@ -7,8 +7,8 @@
     <list default="true" id="f0ef0212-93f6-4d74-a68d-40468a0c81f3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/emailable-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/emailable-report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/features/RussianCarDriver.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/RussianCarDriver.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/Register.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/Register.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/RegisterSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/RegisterSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/steps/RussianCarDriverSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/RussianCarDriverSteps.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +32,9 @@
   &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="2a4mVw17qs0JDgp3rT7fecmjJte" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -44,11 +46,12 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "TestNG.LoginTest.executor": "Run",
     "TestNG.RegisterTest.executor": "Run",
     "TestNG.RunManHoodieTest.executor": "Run",
     "TestNG.RussianCarDriverTest.executor": "Run",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "master__jan",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/janru/00-UNI/01- TQS/cucumber",
     "node.js.detected.package.eslint": "true",
@@ -63,7 +66,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.RegisterTest">
+  <component name="RunManager" selected="TestNG.LoginTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="cucumber" />
@@ -79,6 +82,17 @@
     </configuration>
     <configuration name="emailable-report.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/cucumber/reports/emailable-report.html" useBuiltInWebServerPort="true">
       <method v="2" />
+    </configuration>
+    <configuration name="LoginTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="cucumber" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LoginTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="RegisterTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="cucumber" />
@@ -123,11 +137,13 @@
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="JavaScript Debug.emailable-report.html" />
+      <item itemvalue="TestNG.LoginTest" />
       <item itemvalue="TestNG.RegisterTest" />
       <item itemvalue="TestNG.RussianCarDriverTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.LoginTest" />
         <item itemvalue="TestNG.RegisterTest" />
         <item itemvalue="TestNG.RussianCarDriverTest" />
         <item itemvalue="Application.Main" />
@@ -156,7 +172,8 @@
       <workItem from="1703590862493" duration="137000" />
       <workItem from="1703591008947" duration="3584000" />
       <workItem from="1703689357666" duration="4043000" />
-      <workItem from="1703704793337" duration="7186000" />
+      <workItem from="1703704793337" duration="7610000" />
+      <workItem from="1703778317272" duration="3816000" />
     </task>
     <servers />
   </component>
