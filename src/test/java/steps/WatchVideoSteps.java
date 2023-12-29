@@ -58,8 +58,9 @@ public class WatchVideoSteps {
 
 
         // Window change
+        // Hago que el thread actual espere 2 segundos para que cargue la página correctamente
         try {
-            Thread.sleep(1000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
