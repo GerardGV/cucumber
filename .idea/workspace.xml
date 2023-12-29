@@ -7,6 +7,7 @@
     <list default="true" id="f0ef0212-93f6-4d74-a68d-40468a0c81f3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +49,7 @@
     "TestNG.RegisterTest.executor": "Run",
     "TestNG.RunManHoodieTest.executor": "Run",
     "TestNG.RussianCarDriverTest.executor": "Run",
+    "TestNG.WatchVideoTest.executor": "Run",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master__jan",
     "kotlin-language-version-configured": "true",
@@ -64,7 +66,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.EditProfileTest">
+  <component name="RunManager" selected="TestNG.WatchVideoTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="cucumber" />
@@ -111,49 +113,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RussianCarDriverTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="WatchVideoTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="cucumber" />
-      <shortenClasspath name="NONE" />
-      <useClassPathOnly />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value=".*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="RussianCarDriverTest" />
-      <option name="GROUP_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="WatchVideoTest" />
       <option name="TEST_OBJECT" value="CLASS" />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/reports" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="PROPERTIES_FILE" value="" />
       <properties />
-      <listeners>
-        <listener class="org.testng.reporters.EmailableReporter" />
-      </listeners>
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
+      <item itemvalue="TestNG.WatchVideoTest" />
       <item itemvalue="TestNG.EditProfileTest" />
       <item itemvalue="TestNG.LoginTest" />
       <item itemvalue="TestNG.RegisterTest" />
-      <item itemvalue="TestNG.RussianCarDriverTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.WatchVideoTest" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="TestNG.EditProfileTest" />
         <item itemvalue="TestNG.LoginTest" />
         <item itemvalue="TestNG.RegisterTest" />
-        <item itemvalue="TestNG.RussianCarDriverTest" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -181,7 +165,9 @@
       <workItem from="1703704793337" duration="7610000" />
       <workItem from="1703778317272" duration="4000000" />
       <workItem from="1703790299925" duration="2834000" />
-      <workItem from="1703863342002" duration="8209000" />
+      <workItem from="1703863342002" duration="8225000" />
+      <workItem from="1703873141966" duration="370000" />
+      <workItem from="1703882595519" duration="5277000" />
     </task>
     <servers />
   </component>
