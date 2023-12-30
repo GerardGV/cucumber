@@ -107,7 +107,7 @@ public class EditProfileSteps {
     @When("^the user changes its (.*), (.*), (.*), (.*), (.*) and (.*)")
     public void userClicksEditProfile(String identity, String username, String name, String gender, String birthDateMonthNumber, String language){
 
-
+        // CHANGE DRIVER WINDOW
         Set<String> allWindows = driver.getWindowHandles();
         allWindows.remove(driver.getWindowHandle());
         String newWindow = allWindows.iterator().next();
