@@ -11,17 +11,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-import static java.lang.Thread.sleep;
-
-public class ChangeLanguage {
-
+public class SelectCategory {
     WebDriver driver;
 
-    @Given("the user starts the main page")
-    public void userInTheMainPage() {
+    @Given("the user is in the main page to select a game category")
+    public void userInMainPage(){
         System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver");
         driver = new ChromeDriver();
-        driver.navigate().to("https://es.y8.com");
+        driver.navigate().to("https://es.y8.com/");
         driver.manage().deleteAllCookies();
 
         WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -31,29 +28,34 @@ public class ChangeLanguage {
         }
     }
 
-    @When("the user clicks in the spanish flag")
-    public void userClicksLanguageOptions(){
+    @When("the user clicks in all the categories")
+    public void clicksAllCategories(){
+        driver.findElement(By.className("all-categories-btn")).click();
 
-        driver.findElement(By.id("locale-selector-dropdown")).click();
     }
 
-    @When("^the user clicks a new (.*) option")
-    public void userClicksNewLanguage(String newLanguage){
-        driver.findElement(By.cssSelector("a.en.locale-link[aria-label='English']")).click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.className("css-ik5ir8")));
-        if (driver.findElement(By.className("css-ik5ir8")).isDisplayed()) { // Cookies popup displayed
-            driver.findElement(By.className("css-ik5ir8")).click();
+    @When("^select (.*)")
+    public void selectCategory(String category){
+        //%1$s indicates 1 element as String in format function
+        String cssSelector = String.format("a[aria-label='%1$s'][title='%1$s']", category);
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, 3);
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("a[aria-label='Juegos de Deportes'][title='Juegos de Deportes']")));
+            driver.findElement(By.cssSelector(cssSelector)).click();
+
+        } catch (NoSuchElementException e) {
+            System.out.println("El elemento no se encontró.");
         }
+
     }
 
-    @Then("Text Iniciar sesion has change to Log In")
-    public void checkLogInText(){
+    @Then("^checking (.*) title of the web page")
+    public void checkingTitle(String category){
         try {
             WebDriverWait wait = new WebDriverWait(driver, 3);
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button.fake-button.idnet-fast-login-link")));
-            String text= driver.findElement(By.cssSelector("button.fake-button.idnet-fast-login-link")).getText();
-            Assert.assertEquals(text, "Log in");
+            String text= driver.findElement(By.cssSelector("h1.title.header-5")).getText();
+            Assert.assertEquals(text, category);
 
         } catch (NoSuchElementException e) {
             System.out.println("El elemento no se encontró.");

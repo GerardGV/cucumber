@@ -4,9 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0ef0212-93f6-4d74-a68d-40468a0c81f3" name="Changes" comment="">
+    <list default="true" id="f0ef0212-93f6-4d74-a68d-40468a0c81f3" name="Changes" comment="change language test done">
+      <change afterPath="$PROJECT_DIR$/src/test/java/GoingHomeWithIcon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/PageArrows.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/SelectCategory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/WatchAllLabels.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/features/GoingHomeWithIcon.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/features/PageArrows.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/features/SelectCategory.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/features/WatchAllLabels.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/steps/GoingHomeWithIcon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/steps/PageArrows.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/steps/SelectCategory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/steps/WatchAllLabels.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/EditProfileSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/EditProfileSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/LoadingTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LoadingTime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/ChangeLanguage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/ChangeLanguage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +35,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
@@ -36,56 +54,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "JavaScript Debug.emailable-report.html.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "TestNG.AddFriendTest.executor": "Run",
-    "TestNG.AddGameToFavouriteTest.executor": "Run",
-    "TestNG.CommentOnVideoTest.executor": "Run",
-    "TestNG.EditProfileTest.executor": "Run",
-    "TestNG.LoginTest.executor": "Run",
-    "TestNG.RegisterTest.executor": "Run",
-    "TestNG.RunManHoodieTest.executor": "Run",
-    "TestNG.RussianCarDriverTest.executor": "Run",
-    "TestNG.WatchVideoTest.executor": "Run",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master__jan",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/janru/00-UNI/01- TQS/cucumber",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "/Users/gerard/Desktop/4.1/TQS/cucumber/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.emailable-report.html.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;TestNG.AddFriendTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.AddGameToFavouriteTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.CommentOnVideoTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.EditProfileTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.RegisterTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.RunManHoodieTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.RussianCarDriverTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.WatchVideoTest.executor&quot;: &quot;Run&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master__jan&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/janru/00-UNI/01- TQS/cucumber&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/gerard/Desktop/4.1/TQS/cucumber/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="TestNG.AddFriendTest">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
-      <module name="cucumber" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AddFriendTest" type="TestNG" temporary="true" nameIsGenerated="true">
+}</component>
+  <component name="RunManager" selected="TestNG.WatchAllLabels">
+    <configuration name="CheckInstagram" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="cucumber" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AddFriendTest" />
+      <option name="MAIN_CLASS_NAME" value="CheckInstagram" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -93,10 +98,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AddGameToFavouriteTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="GoingHomeWithIcon" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="cucumber" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AddGameToFavouriteTest" />
+      <option name="MAIN_CLASS_NAME" value="GoingHomeWithIcon" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -104,10 +109,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CommentOnVideoTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="PageArrows" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="cucumber" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CommentOnVideoTest" />
+      <option name="MAIN_CLASS_NAME" value="PageArrows" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -115,10 +120,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WatchVideoTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="SelectCategory" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="cucumber" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="WatchVideoTest" />
+      <option name="MAIN_CLASS_NAME" value="SelectCategory" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WatchAllLabels" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="cucumber" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="WatchAllLabels" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -127,19 +143,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
-      <item itemvalue="TestNG.AddFriendTest" />
-      <item itemvalue="TestNG.AddGameToFavouriteTest" />
-      <item itemvalue="TestNG.CommentOnVideoTest" />
-      <item itemvalue="TestNG.WatchVideoTest" />
+      <item itemvalue="TestNG.CheckInstagram" />
+      <item itemvalue="TestNG.GoingHomeWithIcon" />
+      <item itemvalue="TestNG.PageArrows" />
+      <item itemvalue="TestNG.SelectCategory" />
+      <item itemvalue="TestNG.WatchAllLabels" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.AddFriendTest" />
-        <item itemvalue="TestNG.AddGameToFavouriteTest" />
-        <item itemvalue="TestNG.CommentOnVideoTest" />
-        <item itemvalue="TestNG.WatchVideoTest" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="TestNG.WatchAllLabels" />
+        <item itemvalue="TestNG.GoingHomeWithIcon" />
+        <item itemvalue="TestNG.PageArrows" />
+        <item itemvalue="TestNG.CheckInstagram" />
+        <item itemvalue="TestNG.SelectCategory" />
       </list>
     </recent_temporary>
   </component>
@@ -173,10 +189,68 @@
       <workItem from="1703948953582" duration="3533000" />
       <workItem from="1703961246035" duration="2905000" />
       <workItem from="1703975682631" duration="1846000" />
+      <workItem from="1704464143705" duration="27325000" />
     </task>
+    <task id="LOCAL-00001" summary="change language test done">
+      <option name="closed" value="true" />
+      <created>1704243264279</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1704243264279</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="change language test done" />
+    <option name="LAST_COMMIT_MESSAGE" value="change language test done" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/steps/CheckInstagram.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/steps/PageArrows.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/steps/LoadingTime.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
