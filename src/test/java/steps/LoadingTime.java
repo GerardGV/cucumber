@@ -26,11 +26,13 @@ public class LoadingTime {
         driver.navigate().to("https://es.y8.com/");
         driver.manage().deleteAllCookies();
 
+
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.presenceOfElementLocated(By.className("css-ik5ir8")));
         if (driver.findElement(By.className("css-ik5ir8")).isDisplayed()) { // Cookies popup displayed
             driver.findElement(By.className("css-ik5ir8")).click();
         }
+
     }
 
     @When("the user clicks the first game")
@@ -42,11 +44,7 @@ public class LoadingTime {
         games.get(0).click();
 
         start= Instant.now();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.className("actions")));
-        if (driver.findElement(By.className("actions")).isDisplayed()) { // Cookies popup displayed
-            driver.findElement(By.className("actions")).click();
-        }
+
 
     }
 
@@ -60,7 +58,7 @@ public class LoadingTime {
             Instant end=Instant.now();
             long milliSecDiff=end.toEpochMilli()-start.toEpochMilli();
             System.out.println(milliSecDiff);
-            //Assert.assertTrue((milliSecDiff <= 70000));
+            Assert.assertTrue((milliSecDiff <= 70000));
         } catch (NoSuchElementException e) {
             System.out.println("El elemento no se encontró.");
         }
