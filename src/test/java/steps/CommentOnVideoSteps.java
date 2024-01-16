@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -26,12 +27,12 @@ public class CommentOnVideoSteps {
     @Given("^the user is in the video section and logged in with its (.*) and (.*)")
     public void userIsInIndexPage(String userEmail, String userPassword){
         // CHROME
-        //System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver");
-        //driver = new ChromeDriver();
+        System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver");
+        driver = new ChromeDriver();
 
         //FIREFOX
-        System.setProperty("webdriver.gecko.driver", "Drivers/geckodriver.exe");
-        driver = new FirefoxDriver();
+        //System.setProperty("webdriver.gecko.driver", "Drivers/geckodriver.exe");
+        //driver = new FirefoxDriver();
 
         driver.navigate().to("https://es.y8.com/anim");
         driver.manage().deleteAllCookies();
@@ -90,7 +91,7 @@ public class CommentOnVideoSteps {
         }
     }
 
-    @When("^the user searchs random (.*) and clicks on the (.*)")
+    @When("^the user searches random (.*) and clicks on the (.*)")
     public void userClicksOnVideo(String videoName, String videoIdentifier) {
         driver.findElement(By.id("q")).sendKeys(videoName); // Search video by name
         driver.findElement(By.id("items-search-form")).click(); // Click on search
@@ -109,8 +110,24 @@ public class CommentOnVideoSteps {
         driver.switchTo().window(driver.getWindowHandle());
 
         WebDriverWait wait = new WebDriverWait(driver, 4);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("idnet-comment-text")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("idnet-comment-text")));
         driver.findElement(By.id("idnet-comment-text")).sendKeys(comment);
+    }
+
+    @When("the user likes the video")
+    public void userLikeVideo(){
+        // Window change
+        // Hago que el thread actual espere 2 segundos para que cargue la página correctamente
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        driver.switchTo().window(driver.getWindowHandle());
+
+        WebDriverWait wait = new WebDriverWait(driver, 4);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("button--icon-thumbup")));
+        driver.findElement(By.className("button--icon-thumbup")).click();
     }
 
     @And("publishes the comment")
@@ -130,6 +147,19 @@ public class CommentOnVideoSteps {
             Assert.assertNotNull(elemento);
         } catch (NoSuchElementException e) {
             Assert.fail("El elemento con el ID 'post-comment-message-success' no se encontró.");
+        }
+    }
+
+    @Then("video is liked")
+    public void theVideoIsLiked() {
+
+        WebDriverWait wait = new WebDriverWait(driver, 4);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("post-comment-message-success")));
+        try {
+            WebElement elemento = driver.findElement(By.id("voting-button-yes"));
+            Assert.assertTrue(elemento.getAttribute("class").contains("green"));
+        } catch (NoSuchElementException e) {
+            Assert.fail("El video no ha sido likeado.");
         }
     }
 }
